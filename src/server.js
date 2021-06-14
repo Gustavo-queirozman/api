@@ -20,14 +20,18 @@ server.use((req, res, next)=>{
     res.header("Content-type", "application/json");
     server.use(cors());
     next();
+    
 });
 
+server.use(express.json());
 
 
 
 
 
-server.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 server.use('/', routes);
 
 server.listen(process.env.PORT,()=>{
