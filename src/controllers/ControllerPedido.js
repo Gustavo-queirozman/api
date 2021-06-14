@@ -5,7 +5,7 @@ module.exports = {
     inserirPedido: async(req, res) => {
         let json = {error:'', result:{}};
 
-      console.log(req);
+      console.log(req.body);
         
         let comprador = req.body.comprador;
         let email = req.body.email;
