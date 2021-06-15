@@ -26,7 +26,7 @@ module.exports = {
     buscarProduto: async (req, res) => {
         let json = {result:{}};
 
-        let nome = req.query.nome; //para pegar o parametro
+        let nome = req.params.nome; //para pegar o parametro
         let produto = await Service.buscarProduto(nome);
 
         if(produto){
