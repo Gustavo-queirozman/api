@@ -19,7 +19,6 @@ module.exports = {
                 if(error) { rejeitado(error); return; }
                 if(results.length > 0){ //vai retornar produtos com o valor da variável 'nome'
                     aceito(results[0]);
-                    console.log(results);
                 }else {
                     aceito(false);
                 }
@@ -34,7 +33,6 @@ module.exports = {
                 if(error) { rejeitado(error); return; }
                 if(results.length > 0){ //vai retornar produtos com o valor da variável 'categoria'
                     aceito(results[0]);
-                    console.log(results);
                 }else {
                     aceito(false);
                 }
