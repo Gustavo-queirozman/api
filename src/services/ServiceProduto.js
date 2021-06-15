@@ -31,12 +31,7 @@ module.exports = {
 
             db.query('SELECT * FROM estoque WHERE categoria = ?', [categoria], (error, results) => {
                 if(error) { rejeitado(error); return; }
-                if(results.length > 0){ //vai retornar produtos com o valor da variável 'categoria'
-                    aceito(results[0]);
-                    console.log(results)
-                }else {
-                    aceito(false);
-                }
+                    aceito(results);
             });
         });
     },
