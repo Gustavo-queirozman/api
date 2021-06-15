@@ -31,8 +31,13 @@ module.exports = {
 
             db.query('SELECT * FROM estoque WHERE categoria = ?', [categoria], (error, results) => {
                 if(error) { rejeitado(error); return; }
+                if(results.length > 0){ //vai verificar se retornou mais de 1 e pegar o 1
                     aceito(results);
                     console.log(results)
+                }else {
+                    console.log("não tem nenhum dado")
+                    aceito(false);
+                }
             });
         });
     },
