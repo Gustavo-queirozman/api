@@ -13,6 +13,7 @@ module.exports = {
         let endereco = req.body.endereco;
 
         if (comprador && email && compra && endereco){
+            console.log("sucessos")
             let idUsuario = await Service.inserirPedido(comprador, email, compra, endereco);
             json.result = {
                 comprador,
