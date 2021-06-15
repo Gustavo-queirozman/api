@@ -20,7 +20,6 @@ router.get('/produto/categoria/:categoria', ControllerProduto.buscarCategoria);/
 const ControllerPedido = require('./controllers/ControllerPedido');
 router.post('/pedido',function(req,res){
   console.log(req.body);
-  res.send("fechou aqui");
 });//inserir carrinho do usuário na base de dados
 
 module.exports = router;
