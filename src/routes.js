@@ -12,6 +12,11 @@ router.get('/carrinho/:user_id', ControllerCarrinho.buscarUmCarrinho);//buscar c
 router.post('/carrinho', ControllerCarrinho.inserirCarrinho);//inserir carrinho do usuário na base de dados
 router.put('/carrinho/:user_id', ControllerCarrinho.alterarCarrinho);//alterar dados do carrinho
 
+const ControllerProduto = require('./controllers/ControllerProduto');
+router.get('/produtos', ControllerProduto.buscarTodosProdutos);//buscar todos produtos
+router.get('/produto?q=:nome', ControllerProduto.buscarProduto);//buscar produto pelo nome
+router.get('/produto?q=:categoria', ControllerProduto.buscarCategoria);//buscar produto pela categoria
+
 const ControllerPedido = require('./controllers/ControllerPedido');
 router.post('/pedido',function(req,res){
   console.log(req.body);
