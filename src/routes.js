@@ -14,8 +14,8 @@ router.put('/carrinho/:user_id', ControllerCarrinho.alterarCarrinho);//alterar d
 
 const ControllerProduto = require('./controllers/ControllerProduto');
 router.get('/produtos', ControllerProduto.buscarTodosProdutos);//buscar todos produtos
-router.get('/produto?nome=:nome', ControllerProduto.buscarProduto);//buscar produto pelo nome
-router.get('/produto?categoria=:categoria', ControllerProduto.buscarCategoria);//buscar produto pela categoria
+router.get('/produto/nome=:nome', ControllerProduto.buscarProduto);//buscar produto pelo nome
+router.get('/produto/categoria=:categoria', ControllerProduto.buscarCategoria);//buscar produto pela categoria
 
 const ControllerPedido = require('./controllers/ControllerPedido');
 router.post('/pedido',function(req,res){
