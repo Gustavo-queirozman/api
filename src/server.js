@@ -23,7 +23,7 @@ server.use((req, res, next)=>{
     
 });
 
-server.use(express.urlencoded({ extended: true}))
+server.use(express.urlencoded())
 server.use(express.json())
 server.use('/', routes);
 
