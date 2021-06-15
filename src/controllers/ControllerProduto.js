@@ -39,7 +39,7 @@ module.exports = {
     buscarCategoria: async (req, res) => {
         let json = {result:{}};
 
-        let categoria = req.query.categoria; //para pegar o parametro
+        Console.log(req.query)
         let produto = await Service.buscarCategoria(categoria);
 
         if(produto){
