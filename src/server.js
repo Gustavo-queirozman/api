@@ -19,7 +19,6 @@ server.use((req, res, next)=>{
     res.header("Access-Control-Allow-Headers", "*");
     res.header("Content-type", "application/json");
     server.use(cors());
-    server.use(express.json());
     next();
     
 });
