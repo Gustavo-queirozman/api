@@ -15,11 +15,12 @@ module.exports = {
     buscarProduto: (nome) => {
         return new Promise((aceito, rejeitado)=>{
 
-            db.query("SELECT * FROM estoque WHERE nome LIKE `%${?}%`", [nome], (error, results) => {
+            db.query("SELECT * FROM estoque WHERE nome LIKE `%${nome}%`", (error, results) => {
                 if(error) { rejeitado(error); return; }
                 if(results.length > 0){ //vai retornar produtos com o valor da variável 'nome'
-                    aceito(results[0]);
+                    aceito(results);
                 }else {
+                    console.log("Atenção, não tem nenhum dado")
                     aceito(false);
                 }
             });
@@ -35,7 +36,6 @@ module.exports = {
                     aceito(results);
                     console.log(results)
                 }else {
-                    console.log("Atenção, não tem nenhum dado")
                     aceito(false);
                 }
             });
