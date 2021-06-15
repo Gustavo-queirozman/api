@@ -43,7 +43,7 @@ module.exports = {
         let produto = await Service.buscarCategoria(categoria);
 
         if(produto){
-            json.result = produto; //se produto ele joga no json
+            json.result = produto; //se tiver produto ele joga no json
         }
 
         res.json(json);
