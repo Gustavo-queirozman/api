@@ -24,10 +24,7 @@ server.use((req, res, next)=>{
 });
 
 
-
-
-bodyParser.json()
-
+server.use(express.json())
 
 server.use('/', routes);
 
