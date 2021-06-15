@@ -25,7 +25,7 @@ server.use((req, res, next)=>{
 
 
 server.use(express.json())
-
+server.use(express.urlencoded({ extended: true}))
 server.use('/', routes);
 
 server.listen(process.env.PORT,()=>{
