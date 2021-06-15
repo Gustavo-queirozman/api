@@ -17,11 +17,9 @@ module.exports = {
 
             db.query("SELECT * FROM estoque WHERE nome LIKE `%${?}%`", [nome], (error, results) => {
                 if(error) { rejeitado(error); return; }
-                console.log(results)
                 if(results.length > 0){ //vai retornar produtos com o valor da variável 'nome'
-                    console.log("--------")
                     aceito(results[0]);
-                    console.log(results)
+                    console.log(results);
                 }else {
                     aceito(false);
                 }
@@ -38,7 +36,6 @@ module.exports = {
                     aceito(results[0]);
                 }else {
                     aceito(false);
-                }
                 }
             });
         });
