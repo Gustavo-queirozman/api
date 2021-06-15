@@ -34,11 +34,9 @@ module.exports = {
 
             db.query('SELECT * FROM estoque WHERE categoria = ?', [categoria], (error, results) => {
                 if(error) { rejeitado(error); return; }
-                console.log(results)
                 if(results.length > 0){ //vai retornar produtos com o valor da variável 'categoria'
-                    console.log("--------")
                     aceito(results[0]);
-                    console.log(results)
+                    console.log(results);
                 }else {
                     aceito(false);
                 }
