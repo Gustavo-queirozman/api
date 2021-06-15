@@ -18,9 +18,5 @@ router.get('/produto/nome/:nome', ControllerProduto.buscarProduto);//buscar prod
 router.get('/produto/categoria/:categoria', ControllerProduto.buscarCategoria);//buscar produto pela categoria
 
 const ControllerPedido = require('./controllers/ControllerPedido');
-router.post('/pedido',function(req,res){
-  console.log(req.body);
-});//inserir carrinho do usuário na base de dados
-
 module.exports = router;
 
