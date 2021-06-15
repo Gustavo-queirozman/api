@@ -20,7 +20,6 @@ server.use((req, res, next)=>{
     res.header("Content-type", "application/json");
     server.use(cors());
     server.use(express.json());
-    server.use(express.urlencoded({extended: true}))
     next();
     
 });
@@ -28,13 +27,9 @@ server.use((req, res, next)=>{
 
 
 
+bodyParser.json()
 
 
-/*server.use(bodyParser.urlencoded({
-  extended: true
-}));
-
-server.use(bodyParser.bodyParser()); */
 server.use('/', routes);
 
 server.listen(process.env.PORT,()=>{
