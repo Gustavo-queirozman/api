@@ -35,7 +35,7 @@ module.exports = {
                     aceito(results);
                     console.log(results)
                 }else {
-                    console.log("não tem nenhum dado")
+                    console.log("Atenção, não tem nenhum dado")
                     aceito(false);
                 }
             });
