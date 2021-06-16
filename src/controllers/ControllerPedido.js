@@ -4,8 +4,6 @@ module.exports = {
 
     inserirPedido: async(req, res) => {
         let json = {error:'', result:{}};
-
-      console.log(req);
         
         let comprador = req.body.comprador;
         let email = req.body.email;
@@ -13,7 +11,7 @@ module.exports = {
         let endereco = req.body.endereco;
 
         if (comprador && email && compra && endereco){
-            console.log("sucessos")
+            console.log('Deu certo!')
             let idUsuario = await Service.inserirPedido(comprador, email, compra, endereco);
             json.result = {
                 comprador,
