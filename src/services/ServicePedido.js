@@ -5,7 +5,7 @@ module.exports = {
     inserirPedido: (comprador, email, compra, endereco)=> {
         return new Promise((aceito, rejeitado)=> {
     
-            db.body('INSERT INTO pedidos (comprador, email, compra, endereco) VALUES (?, ?, ?, ?)',
+            db.query('INSERT INTO pedidos (comprador, email, compra, endereco) VALUES (?, ?, ?, ?)',
                 [comprador, email, compra, endereco],
                 (error, results)=>{
                     if(error){ rejeitado(error); return; }
